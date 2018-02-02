@@ -1,0 +1,13 @@
+name: arm-none-eabi-gcc
+version: 0.0.1
+type: language
+platform: ubuntu@14.04
+description: arm-none-eabi-gcc
+keywords:
+  - arm
+  - gcc
+script: |
+  sudo apt-get update -y
+  sudo apt-get install -y make wget
+  sudo mkdir -p /opt
+  sudo wget -O - https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q1-update/+download/gcc-arm-none-eabi-5_3-2016q1-20160330-linux.tar.bz2 | tar jxvf - -C /opt
