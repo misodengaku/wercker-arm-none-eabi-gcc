@@ -1,13 +1,13 @@
 name: arm-none-eabi-gcc
-version: 0.0.1
+version: 0.0.2
 type: language
-platform: ubuntu@14.04
+platform: ubuntu@18.04
 description: arm-none-eabi-gcc
 keywords:
   - arm
   - gcc
 script: |
   sudo apt-get update -y
-  sudo apt-get install -y make wget
+  sudo apt-get install -y make wget curl
   sudo mkdir -p /opt
-  sudo wget -O - https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q1-update/+download/gcc-arm-none-eabi-5_3-2016q1-20160330-linux.tar.bz2 | tar jxvf - -C /opt
+  sudo wget -O - https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2019q3/RC1.1/gcc-arm-none-eabi-8-2019-q3-update-linux.tar.bz2?revision=c34d758a-be0c-476e-a2de-af8c6e16a8a2?product=GNU%20Arm%20Embedded%20Toolchain,64-bit,,Linux,8-2019-q3-update | tar jxvf - -C /opt
